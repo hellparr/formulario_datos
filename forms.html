@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información</title>
+</head>
+
+<body>
+  <h2><strong>FORMULARIO</strong></h2>
+  <p><small><em>Información recibida por el usuario</em>:</small></p>
+  <hr>
+  <p><strong>Datos Ingresados</strong>:</p>
+  <div>
+    <p>Nombre: <strong><span id="nombre"></span></strong></p>
+    <p>Apellido: <strong><span id="apellido"></span></strong></p>
+    <p>Correo: <strong><span id="email"></span></strong></p>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const nombre = urlParams.get('nombre');
+    const apellido = urlParams.get('apellido');
+    const correo = urlParams.get('correo');
+    document.getElementById('nombre').textContent = nombre;
+    document.getElementById('apellido').textContent = apellido;
+    document.getElementById('email').textContent = correo;
+  </script>
+  <a href="https://pixabay.com/es/images/search/moto/" target="_blank" rel="noopener noreferrer"><img
+      src="https://www.moto1pro.com/sites/default/files/8_bmw_r1250gsadventure_nuevoscolores_2024s_resultado_0.jpg"
+      alt="Nuestra moto."></a>
+
+</body>
+
+</html>
